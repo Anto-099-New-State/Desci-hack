@@ -7,7 +7,6 @@ import ConnectButton from '@/components/ConnectButton'
 export default async function Home() {
   const uploads = await Globalapi.getRecent();
   const myUploads = await Globalapi.myPapers();
-  console.log(myUploads);
   return (
 
     <div className="flex min-h-screen bg-[#faf8ff]">

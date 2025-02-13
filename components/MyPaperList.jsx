@@ -1,12 +1,18 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import { Triangle, MoreVertical } from "lucide-react";
 
 export default function MyPaperList() {
   const [papers, setPapers] = useState([]);
-  const address = localStorage.getItem("walletAddress");
-  console.log(address);
+  const [address, setAddress] = useState("");
+
+  useEffect(() => {
+    const storedAddress = localStorage.getItem("walletAddress");
+    if (storedAddress) {
+      setAddress(storedAddress);
+    }
+  }, []);
+
   useEffect(() => {
     if (!address) return; // Prevent fetching if no address is found
 

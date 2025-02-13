@@ -16,14 +16,13 @@ const HomeContent = () => {
 
   useEffect(() => {
     if (isConnected && address) {
-      localStorage.setItem("walletAddress", address); // Save wallet address
-      router.push("/"); // Redirect to dashboard
+      localStorage.setItem("walletAddress", address); 
+      router.push("/"); 
     }
   }, [isConnected, address, router]);
 
   return (
     <main className="flex flex-col justify-center items-center py-10 relative">
-  {/* Button positioned in the top-left */}
   <div className="absolute top-4 right-4">
     <ConnectButton />
   </div>
@@ -43,7 +42,7 @@ const Home = () => {
       <WagmiProvider config={config}>
         <QueryClientProvider client={client}>
           <RainbowKitProvider>
-            <HomeContent /> {/* Wrapped inside the provider */}
+            <HomeContent /> 
           </RainbowKitProvider>
         </QueryClientProvider>
       </WagmiProvider>

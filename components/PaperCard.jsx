@@ -12,8 +12,8 @@ export default function PaperCard({ paper }) {
         {paper._id}
         </span>
       </div>
-      <h3 className="font-semibold mb-2">{paper.fileUrl.substring(1,10)}</h3>
-      <p className="text-sm text-gray-600 mb-4">{paper.filename.substring(0,6)}</p>
+      <h3 className="font-semibold mb-2">{paper.fileUrl}</h3>
+      <p className="text-sm text-gray-600 mb-4">{paper.filename}</p>
       <div className="flex justify-between items-center text-sm text-gray-500">
         <span>{paper.date}</span>
         <button className="hover:bg-gray-100 p-1 rounded-full">

@@ -10,7 +10,7 @@ export default async function Home() {
   const uploads = await Globalapi.getRecent();
   const myUploads = await Globalapi.myPapers();
   return (
-
+    <main>
     <div className="flex min-h-screen bg-[#faf8ff]">
            <h1> Navigate to  </h1> <p>(unfortunately the deployed link has been depreciated so , i new link has been created,sorry for the  inconvience)</p>
             <Link href="https://desci-hack-sqdi.vercel.app">DesciHacks</Link>
